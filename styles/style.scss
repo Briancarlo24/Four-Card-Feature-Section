@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  font-family: "Poppins", sans-serif;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  // border: 1px solid lightgrey;
+}
+
+// ----------COLORS------------
+$primary-red: hsl(0, 78%, 62%);
+$primary-cyan: hsl(180, 62%, 55%);
+$primary-orange: hsl(34, 97%, 64%);
+$primary-blue: hsl(212, 86%, 64%);
+
+$neutral-very-dark-blue: hsl(234, 12%, 34%);
+$neutral-grayish-blue: hsl(229, 6%, 66%);
+$neutral-very-light-gray: hsl(0, 0%, 98%);
+
+h1,
+h2 {
+  color: $neutral-very-dark-blue;
+}
+
+p {
+  font-size: 15px;
+  color: $neutral-grayish-blue;
+  font-weight: 400;
+}
+
+body {
+  background-color: $neutral-very-light-gray;
+  text-align: center;
+  font-weight: 200;
+  font-size: 15px;
+  padding: 50px 15px;
+
+  .main {
+    // HEADER SECTION-----------------------
+    .title {
+      margin-bottom: 70px;
+      h1 {
+        font-weight: 200;
+        font-size: calc(15px + 2.5vw);
+        margin-bottom: 22px;
+
+        span {
+          font-weight: 600;
+          font-size: calc(15px + 2.5vw);
+        }
+      }
+    }
+
+    // CARD SECTION ----------------------
+
+    .card {
+      height: 220px;
+      padding: 20px;
+      margin: 0 5px 15px;
+      background: white;
+      border-radius: 5px;
+      box-shadow: 0px 14px 48px -38px $primary-blue;
+
+      h2 {
+        font-size: 1.5em;
+      }
+
+      img {
+        position: absolute;
+        right: 25px;
+        bottom: 25px;
+        width: 60px;
+      }
+    }
+
+    .card > * {
+      font-size: 14px;
+      text-align: left;
+      line-height: 1.8;
+    }
+
+    .supervisor {
+      border-top: 5px solid $primary-cyan;
+      position: relative;
+    }
+    .team-builder {
+      border-top: 5px solid $primary-red;
+      position: relative;
+    }
+    .karma {
+      border-top: 5px solid $primary-orange;
+      position: relative;
+    }
+    .calculator {
+      border-top: 5px solid $primary-blue;
+      position: relative;
+    }
+  }
+}
+
+// DESKTOP DESIGN -----------------------------
+@media screen and (min-width: 376px) {
+  body {
+    .main {
+      display: flex;
+      flex-wrap: wrap;
+
+      justify-content: center;
+
+      .title {
+        width: 550px;
+
+        h1 {
+          font-weight: 200;
+          font-size: calc(15px + 1.25vw);
+          margin-bottom: 22px;
+
+          span {
+            font-weight: 600;
+            font-size: calc(15px + 1.25vw);
+          }
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .card-container {
+      padding: 0 5%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 120px;
+
+      .col {
+        width: 410px;
+        display: flex;
+        flex-wrap: wrap;
+
+        justify-content: center;
+        align-items: center;
+
+        .card {
+          margin: 15px;
+          padding: 30px;
+          width: 375px;
+          height: 260px;
+
+          h2 {
+            font-size: 1.6em;
+          }
+
+          p {
+            padding-right: 50px;
+            font-size: 15px;
+          }
+
+          img {
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+            width: 60px;
+          }
+        }
+      }
+    }
+  }
+}
